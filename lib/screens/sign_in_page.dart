@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'sign_up_page.dart'; // Importe a página sign_up_page
+import 'home_page.dart'; // Importe a página home_page.dart
+import 'sign_up_page.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -120,14 +121,23 @@ class SignInPage extends StatelessWidget {
                       ),
                       elevation: 3.0,
                       color: Color(0xFF1E1E1E),
-                      child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 138.0),
-                        child: Text(
-                          'CONECTAR',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                      child: GestureDetector(
+                        onTap: () {
+                          // Redirecionar para a página home_page.dart quando o botão for pressionado
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        },
+                        child: Container(
+                          padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 138.0),
+                          child: Text(
+                            'CONECTAR',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
