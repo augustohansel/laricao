@@ -64,7 +64,8 @@ flutter:
    - assets/images/icon_profile.png
    - assets/images/logo_home_container.png
    - assets/images/raio_home.png
-  # To add assets to your application, add an assets section, like this:
+   - assets/images/logo_roxa.png
+   - assets/images/restaurante_generico.png  # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

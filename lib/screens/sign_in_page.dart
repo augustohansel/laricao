@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart'; // Importe a página home_page.dart
+import 'home_page.dart';
 import 'sign_up_page.dart';
 
 class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1E1E1E),
+      backgroundColor: const Color(0xFF1E1E1E),
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.transparent,
               image: DecorationImage(
                 image: AssetImage('assets/images/background_login.png'),
@@ -26,12 +28,12 @@ class SignInPage extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.7,
             child: Material(
               elevation: 5.0,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(80.0),
               ),
               child: Container(
-                padding: EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(20.0),
+                decoration: const BoxDecoration(
                   color: Color(0xFFF9F9F9),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(80.0),
@@ -41,7 +43,7 @@ class SignInPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Entre',
                       style: TextStyle(
                         color: Color(0xFF1E1E1E),
@@ -49,20 +51,20 @@ class SignInPage extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 80.0),
+                    const SizedBox(height: 80.0),
                     Material(
                       elevation: 3.0,
                       borderRadius: BorderRadius.circular(10.0),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Email',
-                          hintStyle: TextStyle(color: Colors.white),
+                          hintStyle: const TextStyle(color: Colors.white),
                           fillColor: Colors.white,
                           filled: true,
                           prefixIcon: Container(
-                            padding: EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(10.0),
                             alignment: Alignment.centerLeft,
-                            child: Align(
+                            child: const Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 'Email',
@@ -80,7 +82,7 @@ class SignInPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 30.0),
+                    const SizedBox(height: 30.0),
                     Material(
                       elevation: 3.0,
                       borderRadius: BorderRadius.circular(10.0),
@@ -88,13 +90,13 @@ class SignInPage extends StatelessWidget {
                         obscureText: true,
                         decoration: InputDecoration(
                           hintText: 'Senha',
-                          hintStyle: TextStyle(color: Colors.white),
+                          hintStyle: const TextStyle(color: Colors.white),
                           fillColor: Colors.white,
                           filled: true,
                           prefixIcon: Container(
-                            padding: EdgeInsets.all(10.0),
+                            padding: const EdgeInsets.all(10.0),
                             alignment: Alignment.centerLeft,
-                            child: Align(
+                            child: const Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 'Senha',
@@ -112,26 +114,25 @@ class SignInPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 30.0),
+                    const SizedBox(height: 30.0),
                     Material(
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(10.0),
                         bottomLeft: Radius.circular(10.0),
                         bottomRight: Radius.circular(10.0),
                       ),
                       elevation: 3.0,
-                      color: Color(0xFF1E1E1E),
+                      color: const Color(0xFF1E1E1E),
                       child: GestureDetector(
                         onTap: () {
-                          // Redirecionar para a página home_page.dart quando o botão for pressionado
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => HomePage()),
+                            MaterialPageRoute(builder: (context) => const HomePage()),
                           );
                         },
                         child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 138.0),
-                          child: Text(
+                          padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 138.0),
+                          child: const Text(
                             'CONECTAR',
                             style: TextStyle(
                               fontSize: 14,
@@ -164,13 +165,12 @@ class SignInPage extends StatelessWidget {
             right: 0,
             child: GestureDetector(
               onTap: () {
-                // Redirecionar para a página de cadastro (SignUpPage) quando o texto for clicado
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SignUpPage()),
+                  MaterialPageRoute(builder: (context) => const SignUpPage()),
                 );
               },
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Não tem uma conta? Crie agora!',
                   style: TextStyle(

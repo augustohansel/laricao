@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'sign_in_page.dart'; // Importe a página sign_in_page
+import 'sign_in_page.dart';
 
 class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/welcome_page.png'),
                 fit: BoxFit.cover,
@@ -22,13 +24,13 @@ class WelcomePage extends StatelessWidget {
               width: 200.0,
               child: FloatingActionButton(
                 onPressed: () {
-                  // Redirecionar para a página de login (SignInPage) quando o botão for pressionado
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignInPage()),
+                    MaterialPageRoute(builder: (context) => const SignInPage()),
                   );
                 },
-                child: Text(
+                backgroundColor: const Color(0xFF1F1F1F),
+                child: const Text(
                   'MATE A SUA FOME',
                   style: TextStyle(
                     color: Colors.white,
@@ -36,7 +38,6 @@ class WelcomePage extends StatelessWidget {
                     fontWeight: FontWeight.w300,
                   ),
                 ),
-                backgroundColor: Color(0xFF1F1F1F),
               ),
             ),
           ),
